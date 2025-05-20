@@ -1,0 +1,15 @@
+To improve the script structure of the Mortgage Calculator project, I focused on three key objectives.
+The main goal was to achieve clean, maintainable code by applying SOLID principles and common design patterns.
+
+1. Flexible Browser Selection using Factory
+First, I created a dedicated class (DriverFactoryClass) that allows the tester to choose which browser to use for execution.
+This implementation follows the Factory Design Pattern, offering support for Chrome, Firefox, and Edge.
+If new browsers need to be added in the future, they can be integrated easily without modifying the existing logic — adhering to the Open/Closed Principle.
+
+2. Refactoring into Modular Classes
+Previously, all logic and interactions were handled in a single class(HomePage). I refactored this structure into multiple classes, each responsible for a specific part of the application. For instance the activation of FindBy and object page interaction— such as the calculator form or chart section.
+This aligns with the Single Responsibility Principle, and enhances reusability and test clarity.
+
+3. Shared WebDriver with Singleton
+To ensure consistent WebDriver usage across multiple classes, I implemented the Singleton Pattern.
+This guarantees that the same driver instance is shared throughout the execution, avoiding conflicts and reducing redundancy.
